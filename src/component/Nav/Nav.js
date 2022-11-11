@@ -17,7 +17,7 @@ const Nav = ()=>{
                 <Link style={styles} to="/explore">Explore</Link>
                 <Link style={styles} to="/recent">Recents jobs</Link>
                 <Link style={styles} to="/seller">Become a seller</Link>
-                <Link style={styles} to="/signin">Sign in</Link>
+                <Link style={styles} to="/login">Sign in</Link>
             </Box>
         </>
     );

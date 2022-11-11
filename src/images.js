@@ -1,11 +1,13 @@
 import Logo from './assets/logo.png';
 import banner from "./assets/image2.png";
+import image3 from "./assets/image3.png";
 import rectangle11 from "./assets/Rectangle11.png";
 import rectangle13 from "./assets/Rectangle13.png";
 import rectangle14 from "./assets/Rectangle14.png";
 import rectangle16 from "./assets/Rectangle16.png";
 import rectangle17 from "./assets/Rectangle17.png";
 import rectangle47 from "./assets/Rectangle47.png";
+import rectangle74 from "./assets/Rectangle74.png";
 import rectamgle101 from "./assets/Rectangle101.png";
 import rectangle128 from "./assets/Rectangle128.png";
 import rectangle129 from "./assets/Rectangle129.png";
@@ -18,6 +20,8 @@ import rectangle139 from "./assets/Rectangle139.png";
 export {
     Logo,
     banner,
+    image3,
+    rectangle74,
     rectangle11,
     rectangle13,
     rectangle14,

@@ -8,6 +8,7 @@ const Layout = lazy( ()=> import ("./pages/Layout/Layout") );
 const ResetPassword = lazy(()=> import("./pages/ResetPassword/ResetPassword"));
 const UpdatePassword = lazy(()=> import("./pages/UpdatePassword/UpdatePassword"));
 const Explore = lazy(()=> import("./pages/Explore/Explore"));
+const Category = lazy(()=>import("./pages/Category/Category"));
 
 //layout
 
@@ -15,7 +16,7 @@ const Explore = lazy(()=> import("./pages/Explore/Explore"));
 const Router = ()=>{
     return (
         <>
-        <Suspense>
+        
             <Routes>
                 <Route path="/" element={
                     <Suspense>
@@ -60,8 +61,15 @@ const Router = ()=>{
                         </Layout>
                     </Suspense>
                 } />
+                 <Route path="/category" element={
+                    <Suspense>
+                        <Layout>
+                            <Category />
+                        </Layout>
+                    </Suspense>
+                } />
             </Routes>
-        </Suspense>
+        
             
         </>
     );
