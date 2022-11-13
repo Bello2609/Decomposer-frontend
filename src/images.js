@@ -1,6 +1,7 @@
 import Logo from './assets/logo.png';
 import banner from "./assets/image2.png";
 import image3 from "./assets/image3.png";
+import image4 from "./assets/image4.png";
 import rectangle11 from "./assets/Rectangle11.png";
 import rectangle13 from "./assets/Rectangle13.png";
 import rectangle14 from "./assets/Rectangle14.png";
@@ -21,6 +22,7 @@ export {
     Logo,
     banner,
     image3,
+    image4,
     rectangle74,
     rectangle11,
     rectangle13,
