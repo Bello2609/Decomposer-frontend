@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Image, Heading, Text, Checkbox } from "@chakra-ui/react";
+import { Box, Image, Heading, Text } from "@chakra-ui/react";
 import * as images from "../../images";
 import { css } from "@emotion/react";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
   
 const ResetPassword = ()=>{

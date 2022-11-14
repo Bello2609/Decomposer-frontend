@@ -1,4 +1,4 @@
-import { Box, Image, Text, Center} from "@chakra-ui/react";
+import { Box, Image, Text} from "@chakra-ui/react";
 import React from "react";
 import * as images from '../../images';
 import { css } from "@emotion/react";

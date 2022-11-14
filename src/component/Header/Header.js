@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Select, MD } from "@chakra-ui/react";
+import { Box, Select } from "@chakra-ui/react";
 import Button from "../../UI/button";
 import * as images from "../../images";
 import Nav from "../Nav/Nav";
