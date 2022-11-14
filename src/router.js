@@ -10,6 +10,7 @@ const UpdatePassword = lazy(()=> import("./pages/UpdatePassword/UpdatePassword")
 const Explore = lazy(()=> import("./pages/Explore/Explore"));
 const Category = lazy(()=>import("./pages/Category/Category"));
 const CategoryId = lazy(()=>import("./pages/Category/CategoryId"));
+const UserProfile = lazy(()=> import("./pages/UserProfile/UserProfile"));
 
 //layout
 
@@ -59,6 +60,13 @@ const Router = ()=>{
                     <Suspense>
                         <Layout>
                             <Explore />
+                        </Layout>
+                    </Suspense>
+                } />
+                <Route path="/user-profile" element={
+                    <Suspense>
+                        <Layout>
+                            <UserProfile />
                         </Layout>
                     </Suspense>
                 } />

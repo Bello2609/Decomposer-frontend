@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton, useDisclosure } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton } from "@chakra-ui/react";
 const MainModal = ({children, open, close})=>{
    
     

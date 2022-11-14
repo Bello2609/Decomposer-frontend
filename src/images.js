@@ -8,6 +8,8 @@ import rectangle14 from "./assets/Rectangle14.png";
 import rectangle16 from "./assets/Rectangle16.png";
 import rectangle17 from "./assets/Rectangle17.png";
 import rectangle47 from "./assets/Rectangle47.png";
+import rectangle58 from "./assets/Rectangle58.png";
+import rectangle60 from "./assets/Rectangle60.png";
 import rectangle74 from "./assets/Rectangle74.png";
 import rectamgle101 from "./assets/Rectangle101.png";
 import rectangle128 from "./assets/Rectangle128.png";
@@ -30,6 +32,8 @@ export {
     rectangle16,
     rectangle17,
     rectangle47,
+    rectangle58,
+    rectangle60,
     rectamgle101,
     rectangle128,
     rectangle129,
