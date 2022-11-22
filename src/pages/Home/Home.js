@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Select, Input, Wrap, WrapItem, Image, Heading, Center, Button } from "@chakra-ui/react";
+import { Box, Text, Select, Input, Wrap, WrapItem, Image, Heading, Center, Button, HStack } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import * as images from "../../images"
 import { BiSearch } from "react-icons/bi";
@@ -12,7 +12,7 @@ const Home = ()=>{
 
                 <Box p={10}>
                     <Box display="flex" fontWeight="bold" fontSize="3xl" width="50%">
-                        <Box display="flex"><Heading as="h5">Hire the right </Heading>&nbsp;<Heading as="h5" color="blue.400">passionate talent for your</Heading></Box>
+                        <HStack><Heading as="h5" width="285px">Hire the right </Heading><Heading as="h5" color="blue.400" width="600px">passionate talent for your</Heading></HStack>
                     </Box>
                     <Heading as="h5" mb={5}  fontWeight="bold">unique work.</Heading>
 
