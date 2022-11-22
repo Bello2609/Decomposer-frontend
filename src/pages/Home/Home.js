@@ -25,7 +25,7 @@ const Home = ()=>{
                         <Box display="flex" p={2} justifyContent="center" alignItems="centerS" pos="absolute" top="20px" left="350px" width="650px" height="60px" bg="white">
                                 <button css={styles.button_section}><BiSearch /></button>
                                 <Input border="none" mx={2} width="400px" placeholder="Search Talent" />
-                                <Select color="blue" border="none" borderColor="white" width="150px">
+                                <Select color="blue" border="0" borderColor="white" width="auto">
                                     <option value="singer">singer</option>
                                     <option value="producer">producer</option>
                                     <option value="song writer">writers</option>
