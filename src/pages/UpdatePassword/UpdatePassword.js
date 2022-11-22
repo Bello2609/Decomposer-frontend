@@ -17,15 +17,15 @@ const UpdatePassword = ()=>{
                 </Text>
                 <form className="form_container">   
                     <div className="input-box">
-                        <input className="input"  type="password"  />
+                        <input className="input" type="password"  />
                         <label className="input-label" for="password">Current password</label>
                     </div>
                     <div className="input-box">
-                        <input className="input"  type="password"  />
+                        <input className="input" type="password"  />
                         <label className="input-label" for="password">New password</label>
                     </div>
                     <div className="input-box">
-                        <input className="input"  type="password"  />
+                        <input className="input" type="password"  />
                         <label className="input-label" for="password">Confirm password</label>
                     </div>
                     

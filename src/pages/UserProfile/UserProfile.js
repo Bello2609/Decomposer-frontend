@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image, Button, Wrap, WrapItem, Heading, useDisclosure} from "@chakra-ui/react";
+import { Box, Text, Image, Button, Wrap, WrapItem, Heading, Center, useDisclosure} from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import * as images from "../../images";
 import { FiMoreVertical } from "react-icons/fi";
@@ -100,11 +100,31 @@ const UserProfile = ()=>{
                 {/* modal */}
                 <MainModal open={isOpen} close={onClose}>
                     
-                        <Box position="relative" top="0" left="0" bgSize="cover" bgPosition="center" bgImage={`url(${images.rectangle58})`}  height="200px" width="400px">
-                        <Image position="absolute" top="10px" src={images.rectangle60} width="100px" height=" 100px" borderRadius="100" /> 
-                        </Box>
+                    <Box position="relative" top="0px" left="0px" right="0px" bgSize="cover" bgPosition="center" bgImage={`url(${images.rectangle58})`}  height="200px" width="400px">
+                        <Image position="absolute" top="150px" left="150px"   src={images.rectangle60} width="100px" height=" 100px" borderRadius="100" /> 
+                    </Box>
+                    <Box className="profile_details" width="500px">
+                        <Heading>
+                            <Center>Profile Setting</Center>
+                        </Heading>
+                        <form css={styles.form_container}>   
+                        <div className="input-box">
+                            <input className="input" type="password"  />
+                            <label className="input-label" for="password">Current password</label>
+                        </div>
+                        <div className="input-box">
+                            <input className="input" type="password"  />
+                            <label className="input-label" for="password">New password</label>
+                        </div>
+                        <div className="input-box">
+                            <input className="input" type="password"  />
+                            <label className="input-label" for="password">Confirm password</label>
+                        </div>
                         
-                   
+                        <button onClick={onOpen} className="button" type="submit">Confirm Changes</button>
+                    
+                        </form>
+                    </Box>
                 </MainModal>
 
             </Box>
@@ -139,7 +159,84 @@ const styles = {
             align-items: stretch;
             overflow-x: hidden;
         }
+        .profile_details{
+            margin-top: 50px;
+        }
         
+        
+    `,
+    form_container: css`
+        border: 1px solid red;
+        width: 500px;
+        height: auto;
+        margin-top: 15px;
+        
+
+        .button{
+            width: 500px;
+            height: 51px;
+            background: #1E3231;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .button1{
+            width: 500px;
+            height: 51px;
+            background: #fff;
+            color: #1E3231;
+            margin-top: 10px;
+            border: 1px solid #E6E6E6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input{
+            width: 500px;
+            height: 51px;
+            outline: none;
+            border: 1px solid #E6E6E6;
+            padding: 20px 15px;
+            &:focus{
+                border: 2px solid #3D90E2;
+            }
+            &:focus + .input-label{
+                color: #3D90E2;
+                top: -12px;
+                background-color: #fff;
+                outline: none;
+            }
+            &:active + .input-label{
+                color: #3D90E2;
+                top: -12px;
+                background-color: #fff;
+                outline: none;
+            }
+        }
+        .input-box {
+            position: relative;
+            margin-bottom: 15px;
+            &:focus{
+                border: 2px solid #3D90E2;
+            }
+            &:active .input-label{
+                color: #3D90E2;
+            }
+        }
+        .input-label {
+            position: absolute; 
+            top: 10px;
+            left: 8px; 
+            transition: .25s;
+            padding: 0 8px;
+            width: 90px;
+            white-space: nowrap;
+            &:focus:{
+                top: -12px;
+            }
+
+        }
+    
+    
     `
 }
 export default UserProfile;
