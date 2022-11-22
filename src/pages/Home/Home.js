@@ -14,7 +14,7 @@ const Home = ()=>{
                     <Box display="flex" fontWeight="bold" fontSize="3xl" width="50%">
                         <Box display="flex"><Heading as="h5">Hire the right </Heading>&nbsp;<Heading as="h5" color="blue.400">passionate talent for your</Heading></Box>
                     </Box>
-                    <Heading as="h5" mb={5} fontWeight="bold" fontSize="3xl">unique work.</Heading>
+                    <Heading as="h5" mb={5} fontWeight="bold">unique work.</Heading>
 
                     <Text color="gray" fontSize="xs">
                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below <br /> for those interested.
