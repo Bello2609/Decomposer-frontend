@@ -14,7 +14,7 @@ const Header = ()=>{
                     <img src={images.Logo} alt="lartdecomposer" />
                     <Nav />
                     <Select width="150px">
-                        <option value='en'>EN</option>
+                        <option value='en'>ENGLISH</option>
                         <option value='french'>FRENCH</option>
                     </Select>
                     <Button  click={ ()=> navigate("/register") }>Register Now</Button>

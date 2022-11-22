@@ -23,14 +23,14 @@ const Footer = ()=>{
                 <Box display="flex">
                     <Box mr={5} justifyContent="flex-start">
                         <Heading as="h3" size="lg">Help</Heading>
-                            <Text>Sign in</Text>
+                            <Text mt={5}>Sign in</Text>
                             <Text>Become Seller</Text>
                             <Text>Get Quote</Text>
                             <Text>Customer Support</Text>
                     </Box>
                     <Box justifyContent="flex-start">
                         <Heading as="h3" size="lg">Explore</Heading>
-                            <Text>Producer</Text>
+                            <Text mt={5}>Producer</Text>
                             <Text>Singers</Text>
                             <Text>Song Writer</Text>
                             <Text>Master Engineers</Text>

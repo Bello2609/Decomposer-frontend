@@ -47,6 +47,7 @@ const CategoryId = ()=>{
                         </Box>
                     </Box>
                 </Box>
+                {/* review section */}
                 <Box mt={10} display="flex" flexDirection="column">
                     <Heading as="h6">Reviews</Heading>
                     <Box display="flex" height="200px" mt={5}  flexDirection="column">

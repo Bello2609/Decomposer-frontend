@@ -12,9 +12,9 @@ const Home = ()=>{
 
                 <Box p={10}>
                     <Box display="flex" fontWeight="bold" fontSize="3xl" width="50%">
-                        <Box>Hire the right </Box>&nbsp;<Text color="blue.400">passionate talent for your</Text>
+                        <Heading as="h5">Hire the right </Heading>&nbsp;<Heading as="h5" color="blue.400">passionate talent for your</Heading>
                     </Box>
-                    <Text mb={5} fontWeight="bold" fontSize="3xl">unique work.</Text>
+                    <Heading as="h5" mb={5} fontWeight="bold" fontSize="3xl">unique work.</Heading>
 
                     <Text color="gray" fontSize="xs">
                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below <br /> for those interested.
@@ -25,7 +25,7 @@ const Home = ()=>{
                         <Box display="flex" p={2} justifyContent="center" alignItems="centerS" pos="absolute" top="20px" left="350px" width="650px" height="60px" bg="white">
                                 <button css={styles.button_section}><BiSearch /></button>
                                 <Input border="none" mx={2} width="400px" placeholder="Search Talent" />
-                                <Select color="blue" border="none" width="150px">
+                                <Select color="blue" border="none" borderColor="white" width="150px">
                                     <option value="singer">singer</option>
                                     <option value="producer">producer</option>
                                     <option value="song writer">writers</option>
@@ -173,28 +173,28 @@ const Home = ()=>{
                             <Text pr={3} fontSize="30px" color="green.200"><BsShieldCheck /></Text>
                             <Box>
                                 <Heading as="h6" size="xs">Safe and secure</Heading>
-                                <Text>Fund a project to get started and release payment once it's completed</Text>
+                                <Text fontSize="14px">Fund a project to get started and release payment once it's completed</Text>
                             </Box>
                         </Box>
                         <Box display="flex" p={5} mb={3} width="400px" height="100px" border="1px" borderColor="gray.200" borderRadius="10">
                             <Text pr={3} fontSize="30px" color="green.200"><BsShieldCheck /></Text>
                             <Box>
                                 <Heading as="h6" size="xs">Protect your copyright</Heading>
-                                <Text>Our software provides a record of exchanges and files for future reference</Text>
+                                <Text fontSize="14px">Our software provides a record of exchanges and files for future reference</Text>
                             </Box>
                         </Box>
                         <Box display="flex" mb={3} p={5} width="400px" height="100px" border="1px" borderColor="gray.200" borderRadius="10">
                             <Text pr={3} fontSize="30px" color="green.200"><BsShieldCheck /></Text>
                             <Box>
                                 <Heading as="h6" size="xs">Human support</Heading>
-                                <Text>Email, phone and chat to help you with your projects</Text>
+                                <Text fontSize="14px">Email, phone and chat to help you with your projects</Text>
                             </Box>
                         </Box>
                         <Box display="flex" mb={3} p={5} width="400px" height="100px" border="1px" borderColor="gray.200" borderRadius="10">
                             <Text pr={3} fontSize="30px" color="green.200"><BsShieldCheck /></Text>
                             <Box>
                                 <Heading as="h6" size="xs">Level up</Heading>
-                                <Text>Better sounding content gets more plays, bookings and placement</Text>
+                                <Text fontSize="14px">Better sounding content gets more plays, bookings and placement</Text>
                             </Box>
                         </Box>
                     </Box>
