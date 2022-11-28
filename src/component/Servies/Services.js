@@ -5,7 +5,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillStarFill } from "react-icons/bs";
 import { css } from "@emotion/react";
 
-const Service = ()=>{
+const Service = ({open})=>{
     return (
         <>
             <Box display="flex" flexFlow="wrap"  width="100vw">
@@ -69,7 +69,7 @@ const Service = ()=>{
                         </Box>
                     </Box>
                 </Box>
-                <Box css={styles.container} justifyContent="center" alignItems="center" cursor="pointer" p={5}>
+                <Box onClick={open} css={styles.container} justifyContent="center" alignItems="center" cursor="pointer" p={5}>
                     <Text><AiOutlinePlus /></Text>
                     <Text>Add New</Text>
                 </Box>

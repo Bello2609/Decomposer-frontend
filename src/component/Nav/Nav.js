@@ -15,7 +15,7 @@ const Nav = ()=>{
             <Box display="flex" justifyContent="center" pl={4}>
                 <Link style={styles} to="/">Home</Link>
                 <Link style={styles} to="/explore">Explore</Link>
-                <Link style={styles} to="/recent">Recents jobs</Link>
+                <Link style={styles} to="/jobs">Recents jobs</Link>
                 <Link style={styles} to="/seller">Become a seller</Link>
                 <Link style={styles} to="/login">Sign in</Link>
             </Box>

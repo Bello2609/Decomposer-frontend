@@ -11,8 +11,8 @@ const Home = ()=>{
             <Box>
 
                 <Box p={10}>
-                    <Box display="flex" fontWeight="bold" fontSize="3xl" width="50%">
-                        <HStack><Heading as="h5" width="285px">Hire the right </Heading><Heading as="h5" color="blue.400" width="600px">passionate talent for your</Heading></HStack>
+                    <Box display="flex" fontWeight="bold" fontSize="3xl" width="75%">
+                        <Heading as="h5" display="flex">Hire the right&nbsp;<Text as="span" color="blue.400">passionate talent</Text>&nbsp;for your</Heading>
                     </Box>
                     <Heading as="h5" mb={5}  fontWeight="bold">unique work.</Heading>
 

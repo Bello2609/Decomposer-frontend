@@ -1,5 +1,17 @@
 import React from "react";
-import { Box, Text, Image, Button, Wrap, WrapItem, Heading, Center, useDisclosure} from "@chakra-ui/react";
+import {
+     Box,
+     Text, 
+     Image, 
+     Button, 
+     Wrap, 
+     WrapItem, 
+     Heading, 
+     Center, 
+     Input, 
+     Textarea,
+     useDisclosure, 
+     Select} from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import * as images from "../../images";
 import { FiMoreVertical } from "react-icons/fi";
@@ -7,10 +19,15 @@ import { MdLocationOn } from "react-icons/md";
 import { BsFillStarFill } from "react-icons/bs";
 import Service from "../../component/Servies/Services";
 import MainModal from "../../UI/MainModal/MainModal";
+import Botton from "../../UI/button";
+import { FiPaperclip } from "react-icons/fi";
 
 
 const UserProfile = ()=>{
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { isOpen: isProfile, onOpen: openProfile, onClose: closeProfile } = useDisclosure();
+    const { isOpen: isService, onOpen: openService, onClose: closeService } = useDisclosure();
+    const { isOpen: isConfirm, onOpen: openConfirm, onClose: closeConfirm } = useDisclosure();
+    const { isOpen: isMessage, onOpen: openMessage, onClose: closeMessage } = useDisclosure();
     return (
         <>
             <Box css={styles.container}>
@@ -21,7 +38,7 @@ const UserProfile = ()=>{
                 <Box>
                     <Box position="relative" width="100%" height="250px" bgPos="center" bgRepeat="no-repeat" bgSize="cover" bgImage={`url(${images.rectangle58})`}>
                         <Box p={3}>
-                            <Text onClick={onOpen} cursor="pointer" color="white" fontSize="20px">
+                            <Text onClick={openProfile} cursor="pointer" color="white" fontSize="20px">
                                 <FiMoreVertical />
                             </Text>
                         </Box>
@@ -58,7 +75,7 @@ const UserProfile = ()=>{
                 <Box mt={5}>
                     <Heading as="h5">Servies(2)</Heading>
                     <Box className="services">
-                        <Service />
+                        <Service open={openService} />
                     </Box>
                 </Box>
                 {/* review section */}
@@ -97,36 +114,75 @@ const UserProfile = ()=>{
                         </Wrap>
                     </Box>
                 </Box>
-                {/* modal */}
-                <MainModal open={isOpen} close={onClose}>
-                    
-                    <Box position="relative" top="0px" left="0px" right="0px" bgSize="cover" bgPosition="center" bgImage={`url(${images.rectangle58})`}  height="200px" width="400px">
-                        <Image position="absolute" top="150px" left="150px"   src={images.rectangle60} width="100px" height=" 100px" borderRadius="100" /> 
-                    </Box>
-                    <Box className="profile_details" width="500px">
-                        <Heading>
-                            <Center>Profile Setting</Center>
-                        </Heading>
-                        <form css={styles.form_container}>   
-                        <div className="input-box">
-                            <input className="input" type="password"  />
-                            <label className="input-label" for="password">Current password</label>
-                        </div>
-                        <div className="input-box">
-                            <input className="input" type="password"  />
-                            <label className="input-label" for="password">New password</label>
-                        </div>
-                        <div className="input-box">
-                            <input className="input" type="password"  />
-                            <label className="input-label" for="password">Confirm password</label>
-                        </div>
+                {/* profile setting modal */}
+                <MainModal open={isProfile} close={closeProfile}>
+                    <Box display="flex" flexDirection="column" width="500px">
+                        <Box position="relative" top="0px" left="0px" right="0px" bgSize="cover" bgPosition="center" bgImage={`url(${images.rectangle58})`}  height="200px" width="400px">
+                            <Image position="absolute" top="150px" left="150px"   src={images.rectangle60} width="100px" height=" 100px" borderRadius="100" /> 
+                        </Box>
+                        <Box className="profile_details" width="500px">
+                            <Heading>
+                                <Center>Profile Setting</Center>
+                            </Heading>
+                            <form css={styles.form_container}>   
+                            <div className="input-box">
+                                <input className="input" type="password"  />
+                                <label className="input-label" for="password">Current password</label>
+                            </div>
+                            <div className="input-box">
+                                <input className="input" type="password"  />
+                                <label className="input-label" for="password">New password</label>
+                            </div>
+                            <div className="input-box">
+                                <input className="input" type="password"  />
+                                <label className="input-label" for="password">Confirm password</label>
+                            </div>
+                            
+                            <button  className="button" type="submit">Confirm Changes</button>
                         
-                        <button onClick={onOpen} className="button" type="submit">Confirm Changes</button>
-                    
-                        </form>
+                            </form>
+                        </Box>
                     </Box>
                 </MainModal>
+                {/* service adding modal */}
+                <MainModal open={isService} close={closeService} isWidth="500px" isHeight="700px">
+                    <Box display='flex' flexDirection="column" p={5}>
+                        <Heading as="h5" fontSize="30px" mb={10}>Add Service</Heading>
+                        <Input type="text" mb={5} borderRadius="0" placeholder="title" />
+                        <Box display="flex" mb={5}>
+                            <Input type="number" borderRadius="0" placeholder="price" />
+                            <Select borderRadius="0" width="200px" ml={1}>
+                                <option value="per hour">per hour</option>
+                                <option value="per week">per week</option>
+                                <option value="per month">per month</option>
+                                <option value="per sound">per sound</option>
+                                <option value="per project">per project</option>
+                            </Select>
+                        </Box>
+                        <Box mb={5}>
+                            <Textarea  borderRadius="0" placeholder="Description"></Textarea>
+                            <Box display="flex">
+                                <Text><FiPaperclip /></Text>
+                                <Text>Upload File (Optional)</Text>
+                            </Box>
+                        </Box>
+                        <Botton click={openConfirm}>Publish Now</Botton>
+                    </Box>
+                </MainModal>
+                {/* care you sure  modal */}
 
+                <MainModal open={isConfirm} close={closeConfirm}>
+                    <Box height="150px" display="flex" flexDirection="column">
+                        <Text my={5} fontWeight="bold">Are you sure you want to publish service?</Text>
+                        <Botton click={openMessage}>Confirm</Botton>
+                    </Box>
+                </MainModal>
+                {/* confirmation message modal */}
+                <MainModal open={isMessage} close={closeMessage}>
+                    <Box height="150px" display="flex" flexDirection="column">
+                        <Text my={5} fontWeight="bold">Service Published Successfully</Text>
+                    </Box>
+                </MainModal>
             </Box>
         </>
     );

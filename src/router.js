@@ -11,7 +11,8 @@ const Explore = lazy(()=> import("./pages/Explore/Explore"));
 const Category = lazy(()=>import("./pages/Category/Category"));
 const CategoryId = lazy(()=>import("./pages/Category/CategoryId"));
 const UserProfile = lazy(()=> import("./pages/UserProfile/UserProfile"));
-
+const Orders = lazy(()=>import("./pages/Orders/Orders"));
+const Jobs = lazy(()=>import("./pages/Jobs/Jobs"));
 //layout
 
 
@@ -81,6 +82,20 @@ const Router = ()=>{
                     <Suspense>
                         <Layout>
                             <CategoryId />
+                        </Layout>
+                    </Suspense>
+                } />
+                <Route path="/orders" element={
+                    <Suspense>
+                        <Layout>
+                            <Orders />
+                        </Layout>
+                    </Suspense>
+                } />
+                <Route path="/jobs" element={
+                    <Suspense>
+                        <Layout>
+                            <Jobs />
                         </Layout>
                     </Suspense>
                 } />
