@@ -31,17 +31,17 @@ const Dashboard = ()=>{
                    
                 </Box>
                 <Box my={5} display="flex" flexDirection="row">
-                    <Box p={4} mr={3} width="250px" borderRadius="5px" height="100px" border="1px" borderColor="#E1E1E1">
-                        <Text>Amount to Withdrawal:</Text>
-                        <Text>$1000</Text>
+                    <Box p={4} mr={3} width="250px" borderRadius="5px" color="green" height="100px" border="1px" borderColor="#E1E1E1">
+                        <Text fontSize="17px" fontWeight="bold">Amount to Withdrawal:</Text>
+                        <Text fontWeight="bold">$1000</Text>
                     </Box>
-                    <Box p={4} mr={3} width="250px" height="100px" border="1px" borderColor="#E1E1E1">
-                        <Text>Pending Amount:</Text>
-                        <Text>$1000</Text>
+                    <Box p={4} mr={3} width="250px" height="100px" color="blue" border="1px" borderColor="#E1E1E1">
+                        <Text fontSize="17px" fontWeight="bold">Pending Amount:</Text>
+                        <Text fontWeight="bold">$1000</Text>
                     </Box>
-                    <Box p={4} width="250px" height="100px" border="1px" borderColor="#E1E1E1">
-                        <Text>Amount to be cleared</Text>
-                        <Text>$1000</Text>
+                    <Box p={4} width="250px" height="100px" color="purple" border="1px" borderColor="#E1E1E1">
+                        <Text fontSize="17px" fontWeight="bold">Amount to be cleared</Text>
+                        <Text fontWeight="bold">$1000</Text>
                     </Box>
                 </Box>
                 <Box my={5} display="flex">
