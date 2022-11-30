@@ -13,6 +13,7 @@ const CategoryId = lazy(()=>import("./pages/Category/CategoryId"));
 const UserProfile = lazy(()=> import("./pages/UserProfile/UserProfile"));
 const Orders = lazy(()=>import("./pages/Orders/Orders"));
 const Jobs = lazy(()=>import("./pages/Jobs/Jobs"));
+const Dashboard = lazy(()=>import("./pages/Dashboard/Dashboard"));
 //layout
 
 
@@ -96,6 +97,13 @@ const Router = ()=>{
                     <Suspense>
                         <Layout>
                             <Jobs />
+                        </Layout>
+                    </Suspense>
+                } />
+                <Route path="/dashboard" element={
+                    <Suspense>
+                        <Layout>
+                            <Dashboard />
                         </Layout>
                     </Suspense>
                 } />

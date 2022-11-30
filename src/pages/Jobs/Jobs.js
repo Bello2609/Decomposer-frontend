@@ -12,7 +12,6 @@ import { BsFilter } from "react-icons/bs";
 const Jobs = ()=>{
     const { isOpen: isService, onOpen: openService, onClose: closeService } = useDisclosure();
     const [ show, setShow ] = useState(false);
-
     return(
         <>
             <Box css={styles.container}>
