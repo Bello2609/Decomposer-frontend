@@ -14,6 +14,7 @@ const UserProfile = lazy(()=> import("./pages/UserProfile/UserProfile"));
 const Orders = lazy(()=>import("./pages/Orders/Orders"));
 const Jobs = lazy(()=>import("./pages/Jobs/Jobs"));
 const Dashboard = lazy(()=>import("./pages/Dashboard/Dashboard"));
+const Help = lazy(()=>import("./pages/Help/Help"));
 //layout
 
 
@@ -104,6 +105,13 @@ const Router = ()=>{
                     <Suspense>
                         <Layout>
                             <Dashboard />
+                        </Layout>
+                    </Suspense>
+                } />
+                <Route path="/help" element={
+                    <Suspense>
+                        <Layout>
+                            <Help />
                         </Layout>
                     </Suspense>
                 } />
