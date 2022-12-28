@@ -8,7 +8,7 @@ import { BsShieldCheck } from "react-icons/bs";
 const Home = ()=>{
     return (
         <>
-            <Box>
+            {/* <Box>
 
                 <Box p={10}>
                     <Box display="flex" fontWeight="bold" fontSize="3xl" width="75%">
@@ -214,7 +214,8 @@ const Home = ()=>{
                     <Text fontSize="30px" color="white">Subscribe our newsletter and get <br />regular updates</Text>
                     <Button color="gray" borderRadius="0" mt={4} width="200px" height="50px">Subscribe now</Button>
                 </Box>
-            </Box>
+            </Box> */}
+            
         </>
     );
 }
