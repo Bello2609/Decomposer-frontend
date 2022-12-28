@@ -3,6 +3,7 @@ import { Box, Text, Heading, Input} from "@chakra-ui/react";
 import Button from "../../UI/button";
 import { BsTwitter } from "react-icons/bs";
 import { AiFillYoutube } from "react-icons/ai";
+import { Link } from "react-router-dom"
 
 const Footer = ()=>{
     return (
@@ -22,7 +23,7 @@ const Footer = ()=>{
                 </Box>
                 <Box display="flex">
                     <Box mr={5} justifyContent="flex-start">
-                        <Heading as="h3" size="lg">Help</Heading>
+                        <Heading as="h3" size="lg"><Link to="/help">Help</Link></Heading>
                             <Text mt={5}>Sign in</Text>
                             <Text>Become Seller</Text>
                             <Text>Get Quote</Text>

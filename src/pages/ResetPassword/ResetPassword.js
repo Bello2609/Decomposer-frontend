@@ -16,7 +16,7 @@ const ResetPassword = ()=>{
                 </Text>
                 <form className="form_container">
                     <div className="input-box">
-                        <input className="input"  type="email"  />
+                        <input className="input" name="email" type="email"  />
                         <label className="input-label" for="email">Email</label>
                     </div>
                     <button className="button" type="submit">Continue</button>

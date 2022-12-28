@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Heading, Text, Checkbox } from "@chakra-ui/react";
+import { Box, Image, Heading, Text, Checkbox, Select } from "@chakra-ui/react";
 import * as images from "../../images";
 import { css } from "@emotion/react";
 import { FcGoogle } from "react-icons/fc";
@@ -17,16 +17,28 @@ const Register = ()=>{
                 </Text>
                 <form className="form_container">   
                     <div className="input-box">
-                        <input className="input"  type="text"  />
+                        <input className="input" name="name" type="text"  />
                         <label className="input-label" for="name">Name</label>
                     </div>
                     <div className="input-box">
-                        <input className="input"  type="email"  />
+                        <input className="input" name="email" type="email"  />
                         <label className="input-label" for="email">Email</label>
                     </div>
                     <div className="input-box">
-                        <input className="input"  type="password"  />
+                        <input className="input" name="password" type="password"  />
                         <label className="input-label" for="password">Password</label>
+                    </div>
+                    <div className="input-box">
+                        <input className="input" name="confirmPassword" type="password"  />
+                        <label className="input-label" for="password">Confirm Password</label>
+                    </div>
+                    <div className="input-box">
+                        <label for="roles">select whether you are a buyer or a seller</label>
+                        <Select height="51px" name="role">
+                            <option value="buyer">Buyer</option>
+                            <option value="seller">Seller</option>
+                        </Select>
+                        
                     </div>
                     <Checkbox>Please send me news and offers as newsletter!</Checkbox>
                     <button className="button" type="submit">Sign Up</button>
