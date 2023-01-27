@@ -15,7 +15,7 @@ const Orders = lazy(()=>import("./pages/Orders/Orders"));
 const Jobs = lazy(()=>import("./pages/Jobs/Jobs"));
 const Dashboard = lazy(()=>import("./pages/Dashboard/Dashboard"));
 const Help = lazy(()=>import("./pages/Help/Help"));
-const Error = lazy(()=>import("./pages/Error/Error"));
+// const Error = lazy(()=>import("./pages/Error/Error"));
 //layout
 
 
@@ -24,15 +24,15 @@ const Router = ()=>{
         <>
         
             <Routes>
-                <Route path="/" element={
+                {/* <Route path="/" element={
                     <Suspense>
                         <Layout>
                             <Error />
                         </Layout>
                     </Suspense>
                     } 
-                />
-                {/* <Route path="/" element={
+                /> */}
+                <Route path="/" element={
                     <Suspense>
                         <Layout>
                             <Home />
@@ -123,7 +123,7 @@ const Router = ()=>{
                             <Help />
                         </Layout>
                     </Suspense>
-                } /> */}
+                } />
             </Routes>
         
             
