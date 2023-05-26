@@ -1,3 +1,10 @@
+// My name is bello hadi i am putting this here to the new developer that will be working on the this project
+// i just want you to know that i started this project from scratch but mathieu jetyl didnt pay me up 
+// which is why i didnt continue the project. he promise to pay but he didnt, he scam . you can reach out to me on whatspp
+// +2348069573501, so if you were work with him be careful.
+
+
+
 import React from "react";
 import { Box, Text, Select, Input, Wrap, WrapItem, Image, Heading, Center, Button, HStack } from "@chakra-ui/react";
 import { css } from "@emotion/react";

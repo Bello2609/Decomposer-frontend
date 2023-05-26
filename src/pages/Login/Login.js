@@ -4,8 +4,33 @@ import * as images from "../../images";
 import { css } from "@emotion/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { login } from "../../Store/Reducer/AuthReducer/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const loginSchema = Yup.object().shape({
+    email: Yup.string().email("email is required").required("kindly enter a correct email"),
+    password: Yup.string().required("Password is required")
+});
   
 const Login = ()=>{
+        const dispatch = useDispatch();
+        const { isLoading,  } = useSelector(state=> state.login)
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            password: ""
+        },
+        validationSchema: loginSchema,
+        onSubmit: values => {
+            console.log(values);
+            dispatch(login(values));
+        }
+    })
+
     return(
         <Box width="100%" display="flex" justifyContent="space-between">
             <Box css={styles.container} display="flex" flexDirection="column">
@@ -15,21 +40,24 @@ const Login = ()=>{
                 <Text color="gray">
                     The standard chunk of Lorem Ipsum used since the<br /> 1500s is reproduced.
                 </Text>
-                <form className="form_container">
+                <form className="form_container" onSubmit={formik.handleSubmit}>
                     <div className="input-box">
-                        <input className="input"  type="email"  />
-                        <label className="input-label" for="email">Email</label>
+                        <input className="input"  name="email" type="email" onChange={formik.handleChange} value={formik.values.email} onBlur={formik.handleBlur}  />
+                        {formik.touched.email && formik.errors.email ? (<Box color="red">{formik.errors.email}</Box>) : null}
+                        <label className="input-label" htmlFor="email">Email</label>
                     </div>
                     <div className="input-box">
-                        <input className="input"  type="password" />
-                        <label className="input-label" for="password">Password</label>
+                        <input className="input" name="password" type="password" onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur}  />
+                        {formik.touched.password && formik.errors.password ? (<Box color="red">{formik.errors.password}</Box>) : null}
+                        <label className="input-label" htmlFor="password">Password</label>
                     </div>
                     <Box display="flex" justifyContent="space-between">
                         <Checkbox>Remember me</Checkbox>
                         <Link style={{"color": "#3D90E2" }} to="/forget-password" >Forget Password</Link>
                     </Box>
-                    <button className="button" type="submit">Login</button>
-                    <button className="button1" type="submit"><FcGoogle />Login with Google</button>
+                    <button className="button" type="submit">{ isLoading ? "loading..." : "Login" }</button>
+                    {/* <button className="button1" type="submit"><FcGoogle />Login with Google</button> */}
+                    <ToastContainer autoClose={2000} />
                 </form>
                 <Text>Dont have any account?&nbsp; <Link style={{"color": "#3D90E2" }} to="/register">Sign up</Link> </Text>
             </Box>
@@ -76,6 +104,17 @@ const styles = {
             border: 1px solid #E6E6E6;
             padding: 20px 15px;
             &:focus{
+                border: 2px solid #3D90E2;
+            }
+            // &:valid + .input-label{
+            //     top: -12px;
+            // }
+            &:not([value=""]) + .input-label{
+                top: -12px;
+                color: #3D90E2;
+                background-color: #fff;
+            }
+            &:not([value=""]){
                 border: 2px solid #3D90E2;
             }
             &:focus + .input-label{
