@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 
-const api_url = "http://localhost:9000/api/v1/auth/register";
+const api_url = "https://decomposer.onrender.com//api/v1/auth/register";
 const initialState = {
     isLoading: false,
     errorMessage: "",

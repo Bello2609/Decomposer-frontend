@@ -37,7 +37,7 @@ const Register = ()=>{
         }
     })
     const googleSignUp = ()=>{
-        window.open("http://localhost:9000/api/v1/auth/google", "_blank");
+        window.open("https://decomposer.onrender.com/google/", "_self");
     }
 
     return(
