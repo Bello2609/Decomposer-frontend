@@ -9,7 +9,9 @@ import "@fontsource/poppins";
 import theme from './theme';
 import { Provider } from "react-redux";
 //redux store
-import { store } from './Store/store';
+import { store, persistor } from './Store/store';
+import { PersistGate } from "redux-persist/integration/react";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +19,9 @@ root.render(
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Provider store={store}>
-          <App />
+          <PersistGate loading={null} persistor={persistor}>
+            <App />
+          </PersistGate>
         </Provider>
       </ChakraProvider>
     </BrowserRouter>

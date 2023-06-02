@@ -18,7 +18,7 @@ const loginSchema = Yup.object().shape({
   
 const Login = ()=>{
         const dispatch = useDispatch();
-        const { isLoading,  } = useSelector(state=> state.login)
+        const { isLoading,  } = useSelector(state=> state.reducers.login)
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -30,6 +30,9 @@ const Login = ()=>{
             dispatch(login(values));
         }
     })
+    const googleSignUp = ()=>{
+        window.open("https://decomposer.onrender.com/google/", "_self");
+    }
 
     return(
         <Box width="100%" display="flex" justifyContent="space-between">
@@ -56,13 +59,14 @@ const Login = ()=>{
                         <Link style={{"color": "#3D90E2" }} to="/forget-password" >Forget Password</Link>
                     </Box>
                     <button className="button" type="submit">{ isLoading ? "loading..." : "Login" }</button>
-                    {/* <button className="button1" type="submit"><FcGoogle />Login with Google</button> */}
+                    
                     <ToastContainer autoClose={2000} />
                 </form>
+                <button className="button1" type="submit"><FcGoogle />Login with Google</button>
                 <Text>Dont have any account?&nbsp; <Link style={{"color": "#3D90E2" }} to="/register">Sign up</Link> </Text>
             </Box>
             <Box>
-                <Image height="100vh" src={images.rectangle47} alt="logo" /> 
+                <Image height="100vh" src={images.rectangle47} alt="logo" />
             </Box>
         </Box>
     );
@@ -72,13 +76,22 @@ const styles = {
     padding-top: 50px;
     padding-left: 200px;
     font-family: Futura PT;
+    .button1{
+        width: 500px;
+        height: 51px;
+        background: #fff;
+        color: #1E3231;
+        margin-top: 10px;
+        border: 1px solid #E6E6E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    },
 
     .form_container{
         width: 500px;
         height: auto;
         margin-top: 15px;
-        
-
         .button{
             width: 500px;
             height: 51px;
@@ -86,17 +99,7 @@ const styles = {
             color: #fff;
             margin-top: 10px;
         }
-        .button1{
-            width: 500px;
-            height: 51px;
-            background: #fff;
-            color: #1E3231;
-            margin-top: 10px;
-            border: 1px solid #E6E6E6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        
         .input{
             width: 500px;
             height: 51px;

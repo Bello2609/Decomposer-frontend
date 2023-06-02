@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import  PrivateRoutes from "./Utils/privateRoutes";
 // Pages 
 const Home = lazy( ()=> import("./pages/Home/Home") );
 const Register = lazy(()=>import("./pages/Register/Register"));
@@ -35,7 +36,9 @@ const Router = ()=>{
                 <Route path="/" element={
                     <Suspense>
                         <Layout>
-                            <Home />
+                            <PrivateRoutes>
+                                <Home />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                     } 
@@ -71,49 +74,65 @@ const Router = ()=>{
                  <Route path="/explore" element={
                     <Suspense>
                         <Layout>
-                            <Explore />
+                            <PrivateRoutes>
+                                <Explore />
+                            </PrivateRoutes>
+                            
                         </Layout>
                     </Suspense>
                 } />
                 <Route path="/user-profile" element={
                     <Suspense>
                         <Layout>
-                            <UserProfile />
+                            <PrivateRoutes>
+                                <UserProfile />
+                            </PrivateRoutes>
+                            
                         </Layout>
                     </Suspense>
                 } />
                  <Route path="/category" element={
                     <Suspense>
                         <Layout>
-                            <Category />
+                            <PrivateRoutes>
+                                <Category />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                 } />
                 <Route path="/category/:id" element={
                     <Suspense>
                         <Layout>
-                            <CategoryId />
+                            <PrivateRoutes>
+                                <CategoryId />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                 } />
                 <Route path="/orders" element={
                     <Suspense>
                         <Layout>
-                            <Orders />
+                            <PrivateRoutes>
+                                <Orders />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                 } />
                 <Route path="/jobs" element={
                     <Suspense>
                         <Layout>
-                            <Jobs />
+                            <PrivateRoutes>
+                                <Jobs />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                 } />
                 <Route path="/dashboard" element={
                     <Suspense>
                         <Layout>
-                            <Dashboard />
+                            <PrivateRoutes>
+                                <Dashboard />
+                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                 } />

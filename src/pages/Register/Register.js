@@ -21,7 +21,7 @@ const registerSchema = Yup.object().shape({
 });
 const Register = ()=>{
     const dispatch = useDispatch();
-    const { isLoading, errorMessage, successMessage } = useSelector(state=> state.register);
+    const { isLoading, errorMessage, successMessage } = useSelector(state=> state.reducers.register);
     const formik = useFormik({
         initialValues: {
             name: "",
@@ -39,7 +39,6 @@ const Register = ()=>{
     const googleSignUp = ()=>{
         window.open("https://decomposer.onrender.com/google/", "_self");
     }
-
     return(
         <Box width="100%" display="flex" justifyContent="space-between">
             <Box css={styles.container} display="flex" flexDirection="column">
