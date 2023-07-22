@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Navigate } from "react-router-dom";
 
 
 const api_url = "https://decomposer.onrender.com/api/v1/auth/register";
@@ -40,6 +41,7 @@ export const register = (data)=>{
             const res = await axios.post(api_url, data);
             console.log(res.data);
             dispatch(submitDataSuccess(res.data));
+            window.location.href = "/login";
             // toast.success(successMessage);
         }catch(err){
             const msg = err.response?.data;

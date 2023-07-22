@@ -20,7 +20,7 @@ const Header = ()=>{
                         <option value='french'>FRENCH</option>
                     </Select>
                     {
-                        token && isAuthenticated
+                        isAuthenticated
                          ? 
                          <Button  click={ ()=> navigate("/logout") }>Log out</Button> :
                          <Button  click={ ()=> navigate("/register") }>Register Now</Button>

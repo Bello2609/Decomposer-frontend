@@ -36,9 +36,7 @@ const Router = ()=>{
                 <Route path="/" element={
                     <Suspense>
                         <Layout>
-                            <PrivateRoutes>
                                 <Home />
-                            </PrivateRoutes>
                         </Layout>
                     </Suspense>
                     } 

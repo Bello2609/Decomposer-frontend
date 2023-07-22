@@ -9,12 +9,13 @@ import loginReducer from "./Reducer/AuthReducer/loginSlice";
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ["token"]
+    whitelist: ["login"]
 }
+
 const rootReducer = combineReducers({
     register: registerReducer,
     login: loginReducer
-})
+});
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
     reducer: {

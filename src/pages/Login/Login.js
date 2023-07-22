@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Box, Image, Heading, Text, Checkbox } from "@chakra-ui/react";
 import * as images from "../../images";
 import { css } from "@emotion/react";
@@ -18,7 +18,7 @@ const loginSchema = Yup.object().shape({
   
 const Login = ()=>{
         const dispatch = useDispatch();
-        const { isLoading,  } = useSelector(state=> state.reducers.login)
+        const { isLoading, isAuthenticated } = useSelector(state=> state.reducers.login)
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -28,11 +28,21 @@ const Login = ()=>{
         onSubmit: values => {
             console.log(values);
             dispatch(login(values));
+           
+
         }
     })
     const googleSignUp = ()=>{
         window.open("https://decomposer.onrender.com/google/", "_self");
     }
+    // const redirect = ()=>{
+        
+    // }
+    // useMemo(()=>{
+    //     redirect();
+        
+    // }, [isAuthenticated])
+
 
     return(
         <Box width="100%" display="flex" justifyContent="space-between">
@@ -62,7 +72,7 @@ const Login = ()=>{
                     
                     <ToastContainer autoClose={2000} />
                 </form>
-                <button className="button1" type="submit"><FcGoogle />Login with Google</button>
+                <button className="button1" onClick={googleSignUp}><FcGoogle />Login with Google</button>
                 <Text>Dont have any account?&nbsp; <Link style={{"color": "#3D90E2" }} to="/register">Sign up</Link> </Text>
             </Box>
             <Box>
